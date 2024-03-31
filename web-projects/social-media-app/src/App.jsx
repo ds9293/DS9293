@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CreatePostForm from './CreatePostForm';
+import CreatePostForm from "./components/CreatePostForm";
 import Feed from './Feed';
 
 function App() {
