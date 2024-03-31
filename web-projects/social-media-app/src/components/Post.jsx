@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import Comment from './Comment';
 
 function Post() {
-  // Initialize likes using useState
-  const [likes, setLikes] = useState(30);
+  const [likes, setLikes] = useState(0);
 
-  // Update the likes state when the button is clicked
   function handleLike() {
     setLikes(likes + 1);
   }
@@ -14,7 +12,7 @@ function Post() {
     <div>
       <h3>Test Post</h3>
       <p>This is a test post we'll edit later!</p>
-      <p>Likes: {likes}</p> {/* Display the likes from state */}
+      <p>Likes: {likes}</p>
       <button onClick={handleLike}>Like</button>
       <p>Comments:</p>
       <Comment content="This is a test comment!" />
