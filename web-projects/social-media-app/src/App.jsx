@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CreatePostForm from "./components/CreatePostForm";
-import Feed from './Feed';
+import Feed from './components/Feed';
 
 function App() {
   const [posts, setPosts] = useState([]);
