@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Comment from './Comment';
 
-function Post() {
+function Post(props) {
   const [likes, setLikes] = useState(0);
 
   function handleLike() {
@@ -10,8 +10,7 @@ function Post() {
 
   return (
     <div>
-      <h3>Test Post</h3>
-      <p>This is a test post we'll edit later!</p>
+      <h3>{props.content}</h3>
       <p>Likes: {likes}</p>
       <button onClick={handleLike}>Like</button>
       <p>Comments:</p>
