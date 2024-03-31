@@ -7,6 +7,7 @@ function Post() {
       <h3>Test Post</h3>
       <p>This is a test post we'll edit later!</p>
       <p>Likes: 30</p>
+      <button>Like</button>
       <p>Comments:</p>
       <Comment content="This is a test comment!" />
       <Comment content="This is another test comment!" />
