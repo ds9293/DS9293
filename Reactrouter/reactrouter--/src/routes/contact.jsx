@@ -1,15 +1,15 @@
-import { Form } from "react-router-dom";
+import { Form, useLoaderData } from "react-router-dom";
+import { getContact } from "../contacts";
+
+export async function loader({ params }) {
+    const contact = await getContact(params.contactId);
+    return { contact };
+}
 
 export default function Contact() {
-  const contact = {
-    first: "Your",
-    last: "Name",
-    avatar: "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/438099663_7514262395286023_7396021035072627314_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=uEtpMS7SQBoAb50DuEp&_nc_ht=scontent-lga3-2.xx&oh=00_AfCPBuATjg0OePYbh306Pnywrei7q-6Pdm1OIYdsM4taHw&oe=6628B442",
-    twitter: "your_handle",
-    notes: "Some notes",
-    favorite: true,
-  };
 
+    const { contact } = useLoaderData();
+    
   return (
     <div id="contact">
       <div>
@@ -75,7 +75,7 @@ function Favorite({ contact }) {
   return (
     <Form method="post">
       <button
-        name="favorite"
+            name="favorite"
         value={favorite ? "false" : "true"}
         aria-label={
           favorite

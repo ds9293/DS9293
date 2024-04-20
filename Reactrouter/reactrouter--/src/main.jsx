@@ -1,5 +1,5 @@
 import * as React from "react";
-import Root, { loader as rootLoader, action as rootAction, } from "./routes/root";
+import Root, { loader as rootLoader, action as rootAction,   loader as contactLoader, } from "./routes/root";
 import Contact from "./routes/contact";
 import ErrorPage from "./error-page";
 import * as ReactDOM from "react-dom/client";
