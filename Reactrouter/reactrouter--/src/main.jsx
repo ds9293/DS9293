@@ -1,13 +1,9 @@
-import * as React from "react";
-import Root, { loader as rootLoader, action as rootAction,   loader as contactLoader, } from "./routes/root";
-import Contact from "./routes/contact";
-import ErrorPage from "./error-page";
-import * as ReactDOM from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import "./index.css";
+// main.jsx
+import { createBrowserRouter } from "react-router-dom";
+import Contact, { loader as contactLoader } from "./routes/contact";
+import Root from './routes/root';  // Assuming you have a Root component
+import ErrorPage from './routes/error';  // Assuming you have an ErrorPage component
+import { rootLoader, rootAction } from './routes/root';  // Assuming you have these
 
 const router = createBrowserRouter([
   {
@@ -16,15 +12,16 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     loader: rootLoader,
     action: rootAction,
-  children: [
-    {
-      path: "contacts/:contactId",
-      element: <Contact />,
-    },
-  ],
+    children: [
+      {
+        path: "contacts/:contactId",
+        element: <Contact />,
+        loader: contactLoader,
+      },
+    ],
   },
-
 ]);
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
