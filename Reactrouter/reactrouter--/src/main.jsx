@@ -19,8 +19,8 @@ const router = createBrowserRouter([
         loader: contactLoader,
       },
     ],
-  },
-]);
+  }
+])
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
