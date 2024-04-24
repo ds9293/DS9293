@@ -4,6 +4,7 @@ import Contact, { loader as contactLoader } from "./routes/contact";
 import Root from './routes/root';  // Assuming you have a Root component
 import ErrorPage from './routes/error';  // Assuming you have an ErrorPage component
 import { rootLoader, rootAction } from './routes/root';  // Assuming you have these
+import Root, { loader as rootLoader } from "./routes/root";
 
 const router = createBrowserRouter([
   {
