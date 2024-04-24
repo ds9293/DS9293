@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Contact, { 
   loader as contactLoader,
  } from "./routes/contact";
+import Root from './routes/root';  // Assuming you have a Root component
 import ErrorPage from './routes/error';  // Assuming you have an ErrorPage component
 import Root, { 
   loader as rootLoader, 
