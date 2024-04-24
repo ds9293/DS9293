@@ -3,12 +3,11 @@ import { createBrowserRouter } from "react-router-dom";
 import Contact, { 
   loader as contactLoader,
  } from "./routes/contact";
-import Root from './routes/root';  // Assuming you have a Root component
-import ErrorPage from './routes/error';  // Assuming you have an ErrorPage component
-import Root, { 
+ import Root, { 
   loader as rootLoader, 
   action as rootAction,
  } from './routes/root';  // Assuming you have these
+import ErrorPage from './routes/error';  // Assuming you have an ErrorPage component
 
 const router = createBrowserRouter([
   {
