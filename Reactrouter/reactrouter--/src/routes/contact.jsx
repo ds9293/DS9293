@@ -1,7 +1,9 @@
-import { Form } from "react-router-dom";
+import { Form, useLoaderData } from "react-router-dom";
+import { getContact } from "../contacts";
+
 
 export default function Contact() {
-  const contact = {
+    const { contact } = useLoaderData() = {
     first: "Your",
     last: "Name",
     avatar: "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/438099663_7514262395286023_7396021035072627314_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=lUn71B8GZU8Q7kNvgEIz2vn&_nc_ht=scontent-lga3-2.xx&oh=00_AfAKx34uo42O8nfvu1lwG85xi9Tb06RmaJx3qxhFdeKCJg&oe=66309D42",
