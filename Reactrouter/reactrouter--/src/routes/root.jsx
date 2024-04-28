@@ -17,9 +17,7 @@ export default function Root() {
         <div id="sidebar">
           <h1>React Router Contacts</h1>
           <div>
-          <Form method="post">
-            <button type="submit">New</button>
-          </Form>
+         
               <input
                 id="q"
                 aria-label="Search contacts"
@@ -37,6 +35,9 @@ export default function Root() {
                 aria-live="polite"
               >
               </div>
+              <Form method="post">
+            <button type="submit">New</button>
+          </Form>
           </div>
           <nav>
           {contacts.length ? (
