@@ -7,8 +7,15 @@ export async function loader({ params }) {
 }
 
 export default function Contact() {
-    const contact = useLoaderData();
-    
+  const contact = useLoaderData() || {
+    first: "Default",
+    last: "Name",
+    avatar: "https://placekitten.com/g/200/200",
+    twitter: "default_handle",
+    notes: "No additional notes",
+    favorite: false,
+  };
+  
   return (
     <div id="contact">
       <div>
