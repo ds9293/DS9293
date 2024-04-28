@@ -10,12 +10,12 @@ export default function Contact() {
   const contact = useLoaderData() || {
     first: "Default",
     last: "Name",
-    avatar: "https://placekitten.com/g/200/200",
+    avatar: "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/438099663_7514262395286023_7396021035072627314_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=I_3Qvn_uIDcAb4kSqdh&_nc_ht=scontent-lga3-2.xx&oh=00_AfDej3h2rjxXQATmsZx7Q3V227IsdYwGx3K5ne0F35usDg&oe=66345982",
     twitter: "default_handle",
     notes: "No additional notes",
     favorite: false,
   };
-  
+
   return (
     <div id="contact">
       <div>
